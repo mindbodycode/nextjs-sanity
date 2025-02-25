@@ -1,12 +1,12 @@
 import { POSTS_QUERYResult } from "@/sanity.types";
 
-export function PostsPublisher({ posts }: { posts: POSTS_QUERYResult }) {
+export function Posts({ posts }: { posts: POSTS_QUERYResult }) {
   return (
     <ul className="container mx-auto grid grid-cols-1 divide-y divide-blue-100">
       {posts.map((post) => (
         <li key={post._id}>
           <a
-            className="block p-4 hover:bg-blue-50"
+            className="block p-4 hover:bg-blue-50 text-blue-600"
             href={`/posts/${post?.slug?.current}`}
           >
             {post?.title}

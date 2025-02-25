@@ -5,7 +5,7 @@ import { POSTS_QUERY, POST_QUERY } from "@/sanity/lib/queries";
 
 import { client } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
-import { PostPublisher } from "@/components/PostPublisher";
+import { Post } from "@/components/Post";
 
 export async function generateStaticParams() {
   const posts = await client.fetch(POSTS_QUERY);
@@ -27,5 +27,5 @@ export default async function Page({
   if (!post) {
     return notFound();
   }
-  return <PostPublisher post={post} />;
+  return <Post post={post} />;
 }

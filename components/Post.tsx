@@ -4,7 +4,7 @@ import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/sanity/lib/image";
 import { POST_QUERYResult } from "@/sanity.types";
 
-export function PostPublisher({ post }: { post: POST_QUERYResult }) {
+export function Post({ post }: { post: POST_QUERYResult }) {
   const { title, mainImage, body } = post || {};
 
   return (
